@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  
+    <title>Reserva | GYM STAR</title>
+    <meta content="" name="descriptison">
+    <meta content="" name="keywords">
+  
+    <link href="../img/logo.ico" rel="icon">
+    <link href="../img/logo.png" rel="apple-touch-icon">
+  
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/icofont.min.css" rel="stylesheet">
+    <link href="../js/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="../js/venobox/venobox.min.css" rel="stylesheet">
+    <link href="../js/aos/aos.css" rel="stylesheet">
+    <link href="../css/style1.css" rel="stylesheet">
+    <link href="../css/boxicons/css/boxicons.min.css" rel="stylesheet">
+  
+  </head>
+  
+  <body>
+    <!-- ======= Header ======= -->
+    <header id="header"class="fixed-top">
+      <div class="container d-flex">
+  
+        <div class="logo mr-auto">
+          <h1 class="text-light"><a href="../index.html"><img src="../img/logo.png" alt="lOGO" class="img-fluid">Gym Star</a></h1>
+        </div>
+  
+        <nav class="nav-menu d-none d-lg-block">
+          <ul>
+            <li class="active"><a href="../index.html">Inicio</a></li>
+            <li><a href="../forms/reserva.html">Reservas</a></li>
+            <li><a href="../index.html#about">Sobre nosotros</a></li>
+            <li><a href="../index.html#services">Servicios</a></li>
+            
+            <li class="drop-down"><a href="../index.html#portfolio">Ventas/Productos</a>
+  
+              <ul>
+                <li><a href="../index.html#portfolio">Todo</a></li>
+  
+                <li class="drop-down"><a href="../index.html#portfolio">Fajas/Cinturon</a>
+                  <ul>
+                    <li><a href="../index.html#portfolio">Mujer</a></li>
+                    <li><a href="../index.html#portfolio">Hombre</a></li>
+                  </ul>
+                </li>
+                <li><a href="../index.html#portfolio">Leggins/Leguis</a></li>
+                <li><a href="../index.html#portfolio">Batidos/Malteadas</a></li>
+              </ul>
+            </li>
+            <li><a href="../index.html#team">Equipo</a></li>
+            <li><a href="../index.html#contact">Contacta con nosotros</a></li>
+          </ul>
+        </nav>
+  
+      </div>
+    </header>
+
+     <!-- ======= Hero  ======= -->
+ <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
+  <div class="container text-center text-md-left" data-aos="fade-up">
+    <h1>¡Asegurate de que el día que tú puedas, nosotros tambien podamos!</h1>
+    <h2>Ya puedes hacer tu reserva, mantente saludable, con nuestros entrenadores profesionales te brindamos asistencia personalizada</h2>
+    <div id="h"></div>
+    <a href="#registrar" class="btn-get-started scrollto">Reservar</a>  <a href="#consultar" class="btn-get-started scrollto">Consultar</a>
+     <!-- ======= JS ======= -->
+    <script>
+      let d = new Date();
+      document.getElementById('h').innerHTML = "<h1>El tiempo ahora es:  " + d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds()
+      "</h1>"
+    </script>
+  </div>
+</section>
+
+<main id="main">
+    <section id="registrar" class="contact">
+      <div class="container">
+
+        <div class="row mt-5 justify-content-center" data-aos="fade-up">
+          <div class="col-lg-8">
+
+            <form  action="../class/reserva.php" method="post" role="form" class="php-email-form">
+              <div class="form-row">
+                <div class="col-md-12 form-group">
+
+                  <input type="text" name="nombre" class="form-control" id="nombre" placeholder="Nombre" 
+                  data-rule="minlen:4" data-msg="Por favor, introduzca al menos 4 caracteres" />
+                  <div class="validate"></div>
+
+                </div>
+                <div class="col-md-12 form-group">
+
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Correo eletrocnico" 
+                  data-rule="email" data-msg="Por favor, introduzca un correo electrónico válido" />
+                  <div class="validate"></div>
+
+                </div>
+                <div class="col-md-12 form-group">
+
+                  <input type="phone" class="form-control" name="cellular" id="cellular" placeholder="Celular" 
+                  data-rule="minlen:10" data-msg="Por favor, introduzca al menos 10 caracteres">
+                  <div class="validate"></div>
+
+                </div>
+                <div class="col-md-12 form-group">
+
+                  <input type="date" class="form-control" id="fecha" name="fecha" placeholder="Seleccione la fecha" 
+                  min="2020-08-09" max="2021-02-31" data-rule="required" data-msg="Por favor, introduzca una fecha">
+                  <div class="validate"></div>
+
+                </div>
+                <div class="col-md-12 form-group">
+
+                  <input type="time" class="form-control" id="hora" name="hora" placeholder="Seleccione la hora" 
+                  min="08:00:00" max="18:00:00" data-rule="required" data-msg="Por favor, introduzca una hora">
+                  <div class="validate"></div>
+
+                </div>
+              </div>
+
+              <div class="form-group">
+                <textarea class="form-control" id="mensaje" name="mensaje" rows="5" data-msg="Por favor, escriba su mensaje" placeholder="Mensaje"></textarea>
+                <div class="validate"></div>
+              </div>
+
+              <div class="mb-3">
+                <div class="loading">Cargando...</div>
+                <div class="sent-message">¡Registro exitoso!</div>
+              </div>
+              <div class="text-center"><button type="submit">Registrar</button></div>
+            </form>
+            <div class="error-message"></div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="consultar" class="contact">
+      <div class="container">
+
+        <div class="row mt-5 justify-content-center" data-aos="fade-up">
+          <div class="col-lg-8">
+
+            <form  action="../class/consulta.php" method="GET" role="form" class="php-email-form">
+              <div class="form-row">
+                <div class="col-md-12 form-group">
+
+                  <input type="email" class="form-control" name="email" placeholder="Correo eletrocnico" 
+                  data-rule="email" data-msg="Por favor, introduzca un correo electrónico válido" />
+                  <div class="validate"></div>
+
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <div class="loading">Cargando...</div>
+                <div class="error-message">No hay registro</div>
+                <div class="sent-message"></div>
+              </div>
+
+              <div class="text-center"><button type="submit">Consultar</button></div>
+            </form>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+          
+    <br><br><br>
+
+</main>
+     <!-- ======= Footer ======= -->
+  <footer id="footer" >
+    
+    <div class="footer-top">
+      <div class="container">
+        <h1 class="text-light"><a href="index.html"><img src="../img/logo.png" width="160" height="160" alt="lOGO" class="img-fluid"></a>GYM STAR</h1>
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-info">
+              <h3></h3>
+              <p>
+                A108 San Judas, TCO,<br>
+                Nariño, CO. <br>
+                <strong><br>WhatsApp:</strong> +57 302 222 4247
+                <strong><br>Email:</strong> escribe@gymstar.com<br>
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Enlaces utiles</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#about">Sobre nosotros</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#services">Servicios</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="">Terminos de servicios</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="">Politica de privacidad</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Redes sociales</h4>
+            
+            <div class="social-links mt-3">
+              <a href="" class="twitter"><i class="icofont-twitter"></i></a>
+              <a href="" class="facebook"><i class="icofont-facebook"></i></a>
+              <a href="" class="instagram"><i class="icofont-instagram"></i></a>
+            </div>
+            <ul>
+                
+            </ul>
+          </div>
+
+            <div class="col-lg-4 col-md-6 footer-newsletter">
+
+              <h4>Boletín</h4>
+              <p>Mantente informado de todo lo que sucede, los mejores descuentos y promociones en nuestros productos y/o servicios.</p>
+                <form action="../class/boletin.php" method="post" role="form" class="php-email-form">
+  
+                  <input type="email" name="email" placeholder="Correo eletrocnico" data-rule="email" data-msg="Por favor, introduzca un correo electrónico válido">
+                  <input type="submit" value="Subscribirse">
+                  <div class="validate"></div>
+                </form>
+                
+            </div>
+          
+         
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright 2020 <strong><span> GYM STAR</span></strong>. Todos los derechos reservados.
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+  <script src="../js/jquery/jquery.min.js"></script>
+  <script src="../js/bootstrap.bundle.min.js"></script>
+  <script src="../js/jquery.easing/jquery.easing.min.js"></script>
+  <script src="../js/validaciones.js"></script>
+  <script src="../js/owl.carousel/owl.carousel.min.js"></script>
+  <script src="../js/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="../js/venobox/venobox.min.js"></script>
+  <script src="../js/aos/aos.js"></script>
+  <script src="../js/main.js"></script>
+  
+</body>
+</html>
