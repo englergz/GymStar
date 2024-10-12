@@ -71,11 +71,21 @@
     <div id="h"></div>
     <a href="#about" class="btn-get-started scrollto">Empezar</a>
      <!-- ======= JS  ======= -->
-    <script>
-      let d = new Date();
-      document.getElementById('h').innerHTML = "<h1>El tiempo ahora es:  " + d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds()
-      "</h1>"
-    </script>
+     <div id="h"></div>
+
+     <script>
+       function updateTime() {
+         let d = new Date();
+         document.getElementById('h').innerHTML = "<h1>El tiempo ahora es: " + d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds() + "</h1>";
+       }
+     
+       // Llama a updateTime cada segundo (1000 milisegundos)
+       setInterval(updateTime, 1000);
+     
+       // Llama a updateTime inmediatamente para mostrar la hora sin esperar el primer intervalo
+       updateTime();
+     </script>
+     
   </div>
 </section>
 
