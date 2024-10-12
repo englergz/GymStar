@@ -45,4 +45,4 @@ jobs:
  
       - name: Actualizar versión en ECS
         run: |
-          aws ecs update-service --cluster gymstar-cluster --service service-and-db-2 --task-definition gymstar-task:4 --force-new-deployment
+          aws ecs update-service --cluster gymstar-cluster --service service-and-db-2 --task-definition gymstar-taks:4 --force-new-deployment
